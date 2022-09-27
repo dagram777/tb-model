@@ -2,7 +2,7 @@
 import gradio as gr
 #import scikit-learn as sklearn
 from fastai.vision.all import *
-from scikit-learn.metrics import roc_auc_score
+from sklearn.metrics import roc_auc_score
 
 #Define dependent functions
 def get_x(row): return Path(str(path/f"{row['rootname']}_small"/f"{row['ID']}") + ".png")
