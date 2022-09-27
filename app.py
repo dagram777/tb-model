@@ -45,4 +45,4 @@ gr.Interface(fn=predict,inputs=gr.inputs.Image(shape=(800, 800)),
              title=title,
              description=description,article=article,
              examples=examples,
-             enable_queue=enable_queue).launch(share=True, )
+             enable_queue=enable_queue).launch(inline=False)
