@@ -1,5 +1,6 @@
 #Importing necessary libraries
 import gradio as gr
+import scikit-learn as sklearn
 #from fastai.vision.all import *
 from sklearn.metrics import roc_auc_score
 
