@@ -40,7 +40,7 @@ enable_queue=True
 
 
 #Launching the gradio application
-gr.Interface(fn=predict,inputs=gr.inputs.Image(shape=(800, 800)),
+gr.Interface(fn=predict,inputs=gr.inputs.Image(shape=(512, 512)),
              outputs=gr.outputs.Label(num_top_classes=1),
              title=title,
              description=description,article=article,
