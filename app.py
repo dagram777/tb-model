@@ -1,6 +1,6 @@
 #Importing necessary libraries
 import gradio as gr
-from fastai.vision.all import *
+#from fastai.vision.all import *
 from sklearn.metrics import roc_auc_score
 
 #Define dependent functions
