@@ -1,3 +1,0 @@
-fastai
-scikit-learn
-scikit-image
