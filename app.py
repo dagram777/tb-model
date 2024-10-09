@@ -25,14 +25,10 @@ def predict(img):
     return {labels[i]: float(probs[i]) for i in range(len(labels))}
 
 #Customizing the gradio interface
-title = "Classifying x-ray scans as either positive or negative Tuberculosis(TB)"
 
-description = """Catching TB early can be life altering.
-Among various techniques used for detecting Tuberculosis, image scanning can be aided with computer vision.
-This dataset was obtained from Zindi with link below. 
-Note: This model and classification is mainly for educational purpose and any user uses it at their own discretion"""
+description = """Please wait while the model is loading....."""
 
-article="<p style='text-align: center'><a href='https://zindi.africa/competitions/runmila-ai-institute-minohealth-ai-labs-tuberculosis-classification-via-x-rays-challenge' target='_blank'>Link to Zindi competition</a></p>"
+
 
 examples = ['patient1.png', 'patient2.png', 'patient3.png']
 
@@ -42,7 +38,6 @@ enable_queue=True
 #Launching the gradio application
 gr.Interface(fn=predict,inputs=gr.inputs.Image(shape=(512, 512)),
              outputs=gr.outputs.Label(num_top_classes=1),
-             title=title,
-             description=description,article=article,
+             description=description,
              examples=examples,
              enable_queue=enable_queue).launch(inline=False)
